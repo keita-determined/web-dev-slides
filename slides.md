@@ -281,7 +281,7 @@ describe('Counter', () => {
 | [**React**](https://react.dev/learn?uwu=true)                                                              | Good to Read All Tutorials               |
 | [**Typescript**](https://www.typescriptlang.org/docs/handbook/typescript-from-scratch.html)                | TS for the New Programmer                |
 | [**Testing Library**](https://testing-library.com/docs/recipes)                                            | Testing Library Example                  |
-| [**Tomato**](https://hpe.enterprise.slack.com/archives/D02Q0SG1UF4)                                        | DM to Tomato                             |
+| [**Tomato**](https://hpe.enterprise.slack.com/archives/D02Q0SG1UF4)                                        | DM Tomato to ketchup                     |
 
 ---
 
