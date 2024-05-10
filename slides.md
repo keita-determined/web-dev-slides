@@ -3,14 +3,13 @@
 theme: seriph
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
-background: https://cover.sli.dev
+background:
 # some information about your slides, markdown enabled
-title: Welcome to Slidev
+title: Web Development 101
 info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
+  ## Web Development 101
+  Presentation slides for Determined AI Web learners.
 
-  Learn more at [Sli.dev](https://sli.dev)
 # apply any unocss classes to the current slide
 class: text-center
 # https://sli.dev/custom/highlighters.html
@@ -24,372 +23,269 @@ transition: slide-left
 mdc: true
 ---
 
-# Welcome to Slidev
+# Web Development 101
 
-Presentation slides for developers
-
-<div class="pt-12">
-  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Press Space for next page <carbon:arrow-right class="inline"/>
-  </span>
-</div>
-
-<div class="abs-br m-6 flex gap-2">
-  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon:edit />
-  </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub" title="Open in GitHub"
-    class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon-logo-github />
-  </a>
-</div>
+Keita Tomato
 
 <!--
 The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
 -->
 
 ---
-transition: fade-out
----
 
-# What is Slidev?
+# What is Web Development?
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
+<div v-click>
+<img
+  id="cake"
+  class="w-80 opacity-100 text-center"
+  src="/cake.png"
+  alt=""
+/>
+</div>
 
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - theme can be shared and used with npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embedding Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage
-
-<br>
-<br>
-
-Read more about [Why Slidev?](https://sli.dev/guide/why)
+<v-switch transition="true">
+<template #1><div class="text-center text-3xl">It's a cake!</div></template>
+<template #2><div class="text-center text-3xl">It's a piece of cake! 🍰🍰🍰</div></template>
+</v-switch>
 
 <!--
 You can have `style` tag in markdown to override the style for the current page.
 Learn more: https://sli.dev/guide/syntax#embedded-styles
 -->
 
-<style>
-h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
-</style>
-
 <!--
 Here is another comment.
 -->
 
----
-transition: slide-up
-level: 2
----
-
-# Navigation
-
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
-
-## Keyboard Shortcuts
-
-|     |     |
-| --- | --- |
-| <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
-
-<!-- https://sli.dev/guide/animations.html#click-animations -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-  alt=""
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
-
----
-layout: two-cols
-layoutClass: gap-16
----
-
-# Table of contents
-
-You can use the `Toc` component to generate a table of contents for your slides:
-
-```html
-<Toc minDepth="1" maxDepth="1"></Toc>
-```
-
-The title will be inferred from your slide content, or you can override it with `title` and `level` in your frontmatter.
-
-::right::
-
-<Toc v-click minDepth="1" maxDepth="2"></Toc>
-
----
-layout: image-right
-image: https://cover.sli.dev
----
-
-# Code
-
-Use code snippets and get the highlighting directly, and even types hover![^1]
-
-```ts {all|5|7|7-8|10|all} twoslash
-// TwoSlash enables TypeScript hover information
-// and errors in markdown code blocks
-// More at https://shiki.style/packages/twoslash
-
-import { computed, ref } from 'vue'
-
-const count = ref(0)
-const doubled = computed(() => count.value * 2)
-
-doubled.value = 2
-```
-
-<arrow v-click="[4, 5]" x1="350" y1="310" x2="195" y2="334" color="#953" width="2" arrowSize="1" />
-
-<!-- This allow you to embed external code blocks -->
-<<< @/snippets/external.ts#snippet
-
-<!-- Footer -->
-[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
-
-<!-- Inline style -->
 <style>
-.footnotes-sep {
-  @apply mt-5 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
+#cake {
+  margin: auto;
 }
 </style>
 
-<!--
-Notes can also sync with clicks
-
-[click] This will be highlighted after the first click
-
-[click] Highlighted with `count = ref(0)`
-
-[click:3] Last click (skip two clicks)
--->
-
----
-level: 2
 ---
 
-# Shiki Magic Move
+# Tech Stack
 
-Powered by [shiki-magic-move](https://shiki-magic-move.netlify.app/), Slidev supports animations across multiple code snippets.
+|                                                           |                                    |
+| --------------------------------------------------------- | ---------------------------------- |
+| [**Typescript**](https://www.typescriptlang.org/)         | Programming Language               |
+| [**React**](https://react.dev/?uwu=true)                  | JS Framework                       |
+| [**Ant Design**](https://ant.design/components/overview/) | UI Library                         |
+| [**Testing Library**](https://testing-library.com/)       | Testing Library                    |
+| [**Hew**](https://github.com/determined-ai/hew)           | UI Kit for HPE AI at Scale Project |
 
-Add multiple code blocks and wrap them with <code>````md magic-move</code> (four backticks) to enable the magic move. For example:
+---
+
+# Folder Structure
+
+In `webui/react`
+
+```txt {all|8,13,15}
+├── public
+│   ├── determined
+│   └── hpe
+├── scripts
+└── src
+    ├── __mocks__
+    ├── assets
+    ├── components
+    ├── constants
+    ├── e2e
+    ├── ee
+    ├── fixtures
+    ├── hooks
+    ├── omnibar
+    ├── pages
+    ├── routes
+    ├── services
+    ├── stores
+    ├── styles
+    ├── utils
+    └── vendor
+```
+
+---
+
+# How to Write React Component
+
+<div>A Component is a reusable piece of code.</div>
 
 ````md magic-move
-```ts {*|2|*}
-// step 1
-const author = reactive({
-  name: 'John Doe',
-  books: [
-    'Vue 2 - Advanced Guide',
-    'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
-})
+```tsx {all|2|3|6}
+// components/Counter.tsx
+const Counter = (): JSX.Element => { // Component name. Function component
+  return (); // write JSX
+};
+
+export default Counter; // export component to use somewhere outside of this file
 ```
 
-```ts {*|1-2|3-4|3-4,8}
-// step 2
-export default {
-  data() {
-    return {
-      author: {
-        name: 'John Doe',
-        books: [
-          'Vue 2 - Advanced Guide',
-          'Vue 3 - Basic Guide',
-          'Vue 4 - The Mystery'
-        ]
-      }
-    }
-  }
-}
+```tsx {all|3-8}
+// components/Counter.tsx
+const Counter = (): JSX.Element => {
+  return (
+    // JSX
+    <div>
+      <button>Counter</button>
+      <div data-testid="counter-text">Counter: 0</div>
+    </div>
+  );
+};
+
+export default Counter;
 ```
 
-```ts
-// step 3
-export default {
-  data: () => ({
-    author: {
-      name: 'John Doe',
-      books: [
-        'Vue 2 - Advanced Guide',
-        'Vue 3 - Basic Guide',
-        'Vue 4 - The Mystery'
-      ]
-    }
-  })
-}
+```tsx {all|5-6,11}
+// components/Counter.tsx
+import { useState } from 'react';
+
+const Counter = (): JSX.Element => {
+  // [the current state, the set function to update the state]
+  const [counter, setCouner] = useState<number>(0); // React hooks
+
+  return (
+    <div>
+      <button>Counter</button>
+      <div data-testid="counter-text">Counter: {counter}</div>
+    </div>
+  );
+};
+
+export default Counter;
 ```
 
-Non-code blocks are ignored.
+```tsx {all|7-11,15}
+// components/Counter.tsx
+import { useCallback, useState } from 'react';
 
-```vue
-<!-- step 4 -->
-<script setup>
-const author = {
-  name: 'John Doe',
-  books: [
-    'Vue 2 - Advanced Guide',
-    'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
-}
-</script>
+const Counter = (): JSX.Element => {
+  const [counter, setCouner] = useState<number>(0);
+
+  const onUpdateCount = useCallback(() => {
+    setCouner((prev) => prev + 1); // update counter state
+    // ❌ DON'T DO this because it won't trigger re-rendering (not update the counter state)
+    // counter += 1
+  }, []);
+
+  return (
+    <div>
+      <button onClick={onUpdateCount}>Counter</button>
+      <div data-testid="counter-text">Counter: {counter}</div>
+    </div>
+  );
+};
+
+export default Counter;
 ```
 ````
 
 ---
 
-# Components
+# How to Use the Component?
 
-<div grid="~ cols-2 gap-4">
-<div>
+```tsx
+import Counter from 'components/Counter'; // Here!
 
-You can use Vue components directly inside your slides.
+const WhateverOtherComponent = (): JSX.Element => {
+  // some code
 
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
-
-```html
-<Counter :count="10" />
+  return (
+    // some code
+    <Counter /> // Here!
+  );
+};
 ```
-
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
-
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
-
-</div>
-<div>
-
-```html
-<Tweet id="1390115482657726468" />
-```
-
-<Tweet id="1390115482657726468" scale="0.65" />
-
-</div>
-</div>
-
-<!--
-Presenter note with **bold**, *italic*, and ~~striked~~ text.
-
-Also, HTML elements are valid:
-<div class="flex w-full">
-  <span style="flex-grow: 1;">Left content</span>
-  <span>Right content</span>
-</div>
--->
-
----
-class: px-20
----
-
-# Themes
-
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
-
-<div grid="~ cols-2 gap-2" m="t-2">
-
-```yaml
----
-theme: default
----
-```
-
-```yaml
----
-theme: seriph
----
-```
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true" alt="">
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true" alt="">
-
-</div>
-
-Read more about [How to use a theme](https://sli.dev/themes/use.html) and
-check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
-
----
-
-# Clicks Animations
-
-You can add `v-click` to elements to add a click animation.
 
 <div v-click>
-
-This shows up when you click the slide:
-
-```html
-<div v-click>This shows up when you click the slide.</div>
-```
-
-</div>
-
-<br>
-
-<v-click>
-
-The <span v-mark.red="3"><code>v-mark</code> directive</span>
-also allows you to add
-<span v-mark.circle.orange="4">inline marks</span>
-, powered by [Rough Notation](https://roughnotation.com/):
-
-```html
-<span v-mark.underline.orange>inline markers</span>
-```
-
-</v-click>
-
-<div mt-20 v-click>
-
-[Learn More](https://sli.dev/guide/animations#click-animations)
-
+<div class="text-center">A Component is a <span v-mark.circle.orange="1">reusable</span> piece of code.</div>
+<div class="text-center text-3xl" >Demo Time!</div>
 </div>
 
 ---
 
-# Motions
+# How to Debug React Code?
 
-Motion animations are powered by [@vueuse/motion](https://motion.vueuse.org/), triggered by `v-motion` directive.
+- Code Search in the Editor
+- Browser Inspector
+  - Elements
+  - Console
+  - Network
+  - Components
+- `console.log()` in code
 
-```html
-<div
-  v-motion
-  :initial="{ x: -80 }"
-  :enter="{ x: 0 }"
-  :click-3="{ x: 80 }"
-  :leave="{ x: 1000 }"
->
-  Slidev
+<div v-click>
+<div class="text-center text-3xl" >Demo Time!</div>
 </div>
+
+---
+
+# How to Write Test
+
+#### [Testing Library](https://testing-library.com/) for Unit and Component Tests
+
+```tsx {all|1|2-5|7-12|14-16|18|20-23|25-27|29|30|32-39}{maxHeight:'400px'}
+// components/Counter.test.tsx
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+
+import Counter from 'components/Counter';
+
+const setup = () => {
+  render(<Counter />); // render arbitrary components
+  const user = userEvent.setup(); // simulates user interactions by dispatching the events
+
+  return { user };
+};
+
+describe('Counter', () => {
+  it('should have a button with Counter text', () => {
+    setup();
+
+    expect(screen.getAllByText('Counter')).toHaveLength(2);
+
+    // use queryBy if the element potentially does not exist
+    // https://testing-library.com/docs/dom-testing-library/cheatsheet/#queries
+    expect(screen.queryByText('Ebichu')).not.toBeInTheDocument();
+
+    // Error since there are multiple elements with `Counter`
+    // expect(screen.getByText('Counter')).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Counter' })).toBeInTheDocument();
+  });
+
+  it('should be clickable', async () => {
+    const { user } = setup();
+
+    const button = screen.getByRole('button', { name: 'Counter' });
+
+    for (let i = 0; i < 10; i++) {
+      // why findby? Read https://testing-library.com/docs/queries/about/
+      expect(await screen.findByTestId('counter-text')).toHaveTextContent(
+        `Counter: ${i}`
+      );
+      // await until promise is resolved
+      await user.click(button);
+    }
+  });
+});
 ```
+
+---
+
+# Useful Links
+
+|                                                                                                            |                                          |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| [**Mozilla**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) | Mozilla as Web Docs (async for example!) |
+| [**React**](https://react.dev/learn?uwu=true)                                                              | Good to Read All Tutorials               |
+| [**Typescript**](https://www.typescriptlang.org/docs/handbook/typescript-from-scratch.html)                | TS for the New Programmer                |
+| [**Testing Library**](https://testing-library.com/docs/recipes)                                            | Testing Library Example                  |
+| [**Tomato**](https://hpe.enterprise.slack.com/archives/D02Q0SG1UF4)                                        | DM to Tomato                             |
+
+---
+
+# Thank you
 
 <div class="w-60 relative">
   <div class="relative w-40 h-40">
@@ -398,23 +294,7 @@ Motion animations are powered by [@vueuse/motion](https://motion.vueuse.org/), t
       :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
       :enter="final"
       class="absolute inset-0"
-      src="https://sli.dev/logo-square.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-circle.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-triangle.png"
+      src="/tomato-paste.png"
       alt=""
     />
   </div>
@@ -424,7 +304,7 @@ Motion animations are powered by [@vueuse/motion](https://motion.vueuse.org/), t
     v-motion
     :initial="{ x: -80, opacity: 0}"
     :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
+    Any Questions?
   </div>
 </div>
 
@@ -443,195 +323,3 @@ const final = {
   }
 }
 </script>
-
-<div
-  v-motion
-  :initial="{ x:35, y: 30, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
-
-[Learn More](https://sli.dev/guide/animations.html#motion)
-
-</div>
-
----
-
-# LaTeX
-
-LaTeX is supported out-of-box powered by [KaTeX](https://katex.org/).
-
-<br>
-
-Inline $\sqrt{3x-1}+(1+x)^2$
-
-Block
-$$ {1|3|all}
-\begin{array}{c}
-
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
-= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
-
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
-
-\nabla \cdot \vec{\mathbf{B}} & = 0
-
-\end{array}
-$$
-
-<br>
-
-[Learn more](https://sli.dev/guide/syntax#latex)
-
----
-
-# Diagrams
-
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
-
-<div class="grid grid-cols-4 gap-5 pt-4 -mb-6">
-
-```mermaid {scale: 0.5, alt: 'A simple sequence diagram'}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
-```
-
-```mermaid {theme: 'neutral', scale: 0.8}
-graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
-
-```mermaid
-mindmap
-  root((mindmap))
-    Origins
-      Long history
-      ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectiveness<br/>and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
-    Tools
-      Pen and paper
-      Mermaid
-```
-
-```plantuml {scale: 0.7}
-@startuml
-
-package "Some Group" {
-  HTTP - [First Component]
-  [Another Component]
-}
-
-node "Other Groups" {
-  FTP - [Second Component]
-  [First Component] --> FTP
-}
-
-cloud {
-  [Example 1]
-}
-
-database "MySql" {
-  folder "This is my folder" {
-    [Folder 3]
-  }
-  frame "Foo" {
-    [Frame 4]
-  }
-}
-
-[Another Component] --> [Example 1]
-[Example 1] --> [Folder 3]
-[Folder 3] --> [Frame 4]
-
-@enduml
-```
-
-</div>
-
-[Learn More](https://sli.dev/guide/syntax.html#diagrams)
-
----
-foo: bar
-dragPos:
-  square: 691,33,167,_,-16
----
-
-# Draggable Elements
-
-Double-click on the draggable elements to edit their positions.
-
-<br>
-
-###### Directive Usage
-
-```md
-<img v-drag="'square'" src="https://sli.dev/logo.png">
-```
-
-<br>
-
-###### Component Usage
-
-```md
-<v-drag text-3xl>
-  <carbon:arrow-up />
-  Use the `v-drag` component to have a draggable container!
-</v-drag>
-```
-
-<v-drag pos="671,205,253,_,-15">
-  <div text-center text-3xl border border-main rounded>
-    Double-click me!
-  </div>
-</v-drag>
-
-<img v-drag="'square'" src="https://sli.dev/logo.png">
-
----
-src: ./pages/multiple-entries.md
-hide: false
----
-
----
-
-# Monaco Editor
-
-Slidev provides built-in Monaco Editor support.
-
-Add `{monaco}` to the code block to turn it into an editor:
-
-```ts {monaco}
-import { ref } from 'vue'
-import { emptyArray } from './external'
-
-const arr = ref(emptyArray(10))
-```
-
-Use `{monaco-run}` to create an editor that can execute the code directly in the slide:
-
-```ts {monaco-run}
-import { version } from 'vue'
-import { emptyArray, sayHello } from './external'
-
-sayHello()
-console.log(`vue ${version}`)
-console.log(emptyArray<number>(10).reduce(fib => [...fib, fib.at(-1)! + fib.at(-2)!], [1, 1]))
-```
-
----
-layout: center
-class: text-center
----
-
-# Learn More
-
-[Documentations](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/showcases.html)

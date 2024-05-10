@@ -1,4 +1,4 @@
-# Welcome to [Slidev](https://github.com/slidevjs/slidev)!
+# Web Development 101 Slides
 
 To start the slide show:
 
