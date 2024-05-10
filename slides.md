@@ -113,7 +113,7 @@ In `webui/react`
 <div>A Component is a reusable piece of code.</div>
 
 ````md magic-move
-```tsx {all|2|3|6}
+```tsx {all|1|2|3|6}
 // components/Counter.tsx
 const Counter = (): JSX.Element => { // Component name. Function component
   return (); // write JSX
@@ -122,12 +122,13 @@ const Counter = (): JSX.Element => { // Component name. Function component
 export default Counter; // export component to use somewhere outside of this file
 ```
 
-```tsx {all|3-8}
+```tsx {all|3-10}
 // components/Counter.tsx
 const Counter = (): JSX.Element => {
   return (
     // JSX
     <div>
+      <h1>Counter</h1>
       <button>Counter</button>
       <div data-testid="counter-text">Counter: 0</div>
     </div>
@@ -137,7 +138,7 @@ const Counter = (): JSX.Element => {
 export default Counter;
 ```
 
-```tsx {all|5-6,11}
+```tsx {all|2,5-6,12}
 // components/Counter.tsx
 import { useState } from 'react';
 
@@ -147,6 +148,7 @@ const Counter = (): JSX.Element => {
 
   return (
     <div>
+      <h1>Counter</h1>
       <button>Counter</button>
       <div data-testid="counter-text">Counter: {counter}</div>
     </div>
@@ -156,7 +158,7 @@ const Counter = (): JSX.Element => {
 export default Counter;
 ```
 
-```tsx {all|7-11,15}
+```tsx {all|7-11,16|all}
 // components/Counter.tsx
 import { useCallback, useState } from 'react';
 
@@ -171,6 +173,7 @@ const Counter = (): JSX.Element => {
 
   return (
     <div>
+      <h1>Counter</h1>
       <button onClick={onUpdateCount}>Counter</button>
       <div data-testid="counter-text">Counter: {counter}</div>
     </div>
@@ -281,7 +284,7 @@ describe('Counter', () => {
 | [**React**](https://react.dev/learn?uwu=true)                                                              | Good to Read All Tutorials               |
 | [**Typescript**](https://www.typescriptlang.org/docs/handbook/typescript-from-scratch.html)                | TS for the New Programmer                |
 | [**Testing Library**](https://testing-library.com/docs/recipes)                                            | Testing Library Example                  |
-| [**Tomato**](https://hpe.enterprise.slack.com/archives/D02Q0SG1UF4)                                        | DM Tomato to ketchup                     |
+| [**Tomato**](https://hpe.enterprise.slack.com/archives/D02Q0SG1UF4)                                        | DM Keita Tomato to Ketchup               |
 
 ---
 
