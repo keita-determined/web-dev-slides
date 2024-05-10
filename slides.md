@@ -225,7 +225,7 @@ const WhateverOtherComponent = (): JSX.Element => {
 
 #### [Testing Library](https://testing-library.com/) for Unit and Component Tests
 
-```tsx {all|1|2-5|7-12|14-16|18|20-23|25-27|29|30|32-39}{maxHeight:'400px'}
+```tsx {all|1|2-5|7-12|14-16|18|20-23|24-27|29|30|32-41}{maxHeight:'400px'}
 // components/Counter.test.tsx
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
