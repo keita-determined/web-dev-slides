@@ -73,6 +73,7 @@ Here is another comment.
 | [**Typescript**](https://www.typescriptlang.org/)         | Programming Language               |
 | [**React**](https://react.dev/?uwu=true)                  | JS Framework                       |
 | [**Ant Design**](https://ant.design/components/overview/) | UI Library                         |
+| [**SCSS**](https://sass-lang.com/)                        | Sassy CSS                          |
 | [**Testing Library**](https://testing-library.com/)       | Testing Library                    |
 | [**Hew**](https://github.com/determined-ai/hew)           | UI Kit for HPE AI at Scale Project |
 
@@ -250,7 +251,7 @@ describe('Counter', () => {
 
     // use queryBy if the element potentially does not exist
     // https://testing-library.com/docs/dom-testing-library/cheatsheet/#queries
-    expect(screen.queryByText('Ebichu')).not.toBeInTheDocument();
+    expect(screen.queryByText('Ebichu Man')).not.toBeInTheDocument();
 
     // Error since there are multiple elements with `Counter`
     // expect(screen.getByText('Counter')).toBeInTheDocument();
